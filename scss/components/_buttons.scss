@@ -1,0 +1,66 @@
+.btn{
+    &-primary{
+        font-size: 18px;
+        padding: 0 38px;
+        border-radius: 16px;
+        display: flex;
+        height: 50px;
+        align-items: center;
+        color: white;
+        border: 2px solid $red;
+        box-sizing: border-box;
+        background-color: $red;
+        position: relative;
+        transition: .3s;
+        &:after{
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-image: url('/public/img/arrow-right.svg');
+            background-size: contain;
+            top: 14px;
+            right: 30px;
+            opacity: 0;
+            transition: .3s;
+        }
+        &:hover{
+            padding-right: 50px;
+            &:after{
+                opacity: 1;
+                right: 12px;
+            }
+        }
+    }
+    &-secondary{
+        font-size: 18px;
+        transition: .3s;
+        padding: 0 38px;
+        border-radius: 16px;
+        display: flex;
+        height: 50px;
+        align-items: center;
+        border: 2px solid white;
+        box-sizing: border-box;
+        color: black;
+        background-color: white;
+        &:hover{
+        }
+    }
+
+    &-theritary{
+        font-size: 18px;
+        padding: 0 38px;
+        border-radius: 16px;
+        display: flex;
+        height: 50px;
+        align-items: center;
+        color: white;
+        border: 2px solid $red;
+        box-sizing: border-box;
+        background-color: transparent;
+        transition: .3s;
+        &:hover{
+        }
+    }
+}

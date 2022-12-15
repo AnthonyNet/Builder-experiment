@@ -1,0 +1,95 @@
+.services{
+    margin-bottom: 100px;
+    .text-48{
+        margin-bottom: 20px;
+    }
+    .text-italic{
+        max-width: 750px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+
+    &__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-between;
+        gap: 20px;
+        row-gap: 120px;
+    }
+
+    .text-20{
+        margin-bottom: 60px;
+    }
+
+    &__item{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+
+        .df{
+            margin-top: auto;
+        }
+
+        & > img{
+
+            height: 80px;
+            margin-bottom: auto;
+        }
+
+        .text-36{
+            margin-bottom: 6px;
+        }
+
+        .text-18{
+            margin-bottom: 30px;
+            min-height: 108;
+            min-height: 75px;
+            max-width: 430px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn-primary{
+           &.blue{
+            background-color: $blue;
+            background-color: #5C779C;
+            color: white;
+            border-color: #5C779C;
+           }
+           &.white{
+                background-color: white;
+                color: black;
+                border-color: white;
+                &:after{
+                    filter: invert(1);
+                }
+           }
+        }
+    
+        
+    }
+
+    .lSSlideOuter .lSPager.lSpg{
+        margin-top: 20px !important;
+        margin-bottom: 40px;
+        @media screen and (min-width: 1380px) {
+            opacity: 0;
+        }
+    }
+
+    .lSSlideOuter{
+        margin-bottom: 40px;
+        @media screen and (max-width: 720px) {
+            margin-bottom: 80px;
+        }
+    }
+
+    .lSAction > a {
+        top: calc(100% - 25px);
+    }
+}
+
+.slideshowflex{
+    min-height: 340px !important;
+}

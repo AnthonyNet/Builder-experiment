@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+html{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.text{
+    /* font size */
+    &-70{
+        font-size: 70px;
+        @media screen and (max-width: 540px){
+            font-size: 42px;
+        }
+    }
+    &-48{
+        font-size: 48px;
+        @media screen and (max-width: 540px){
+            font-size: 34px;
+        }
+    }
+    &-36{
+        font-size: 36px;
+    }
+    &-40{
+        font-size: 40px;
+        @media screen and (max-width: 540px){
+            font-size: 28px;
+        }
+    }
+    &-30{
+        font-size: 30px;
+        @media screen and (max-width: 540px){
+            font-size: 24px;
+        }
+    }
+    &-25{
+        font-size: 25px;
+        @media screen and (max-width: 540px){
+            font-size: 21px;
+        }
+    }
+    &-22{
+        font-size: 22px;
+        @media screen and (max-width: 540px){
+            font-size: 18px;
+        }
+    }
+    &-20{
+        font-size: 20px;
+        @media screen and (max-width: 540px){
+            font-size: 16px;
+        }
+    }
+    &-18{
+        font-size: 18px;
+    }
+    &-16{
+        font-size: 16px;
+        @media screen and (max-width: 540px){
+            font-size: 15px;
+        }
+    }
+    &-14{
+        font-size: 14px;
+    }
+    
+    /* font weight */
+    &-boldest{
+        font-weight: 900;
+    }
+    &-extrabold{
+        font-weight: 800;
+    }
+    &-bold{
+        font-weight: 700;
+    }
+    &-semi{
+        font-weight: 600;
+    }
+    &-medium{
+        font-weight: 500;
+    }
+    &-regular{
+        font-weight: 400;
+    }
+    &-small{
+        font-weight: 300;
+    }
+    
+    /* font styles */
+    &-uppercase{
+        text-transform: uppercase;
+    }
+    &-center{
+        text-align: center;
+    }
+
+    /* font colors */
+  
+    &-red{
+        color: $red;
+    }
+    &-blue{
+        color: $blue;
+    }
+    &-bluelight{
+        color: $blue-light;
+    }
+    &-bluedark{
+        color: $dark-blue;
+    }
+    &-graylight{
+        color: $gray-light;
+    }
+    &-white{
+        color: white;
+    }
+  
+    &-italic{
+        font-style: italic;
+    }
+}

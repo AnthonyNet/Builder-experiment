@@ -1,0 +1,65 @@
+.menu{
+    
+}
+
+.header{
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: $blue;
+    @media screen and (max-width: 720px){
+        position: fixed;
+        width: 100%;
+        top: 0;
+        &:after{
+            position: absolute;
+            background-color: $blue;
+            height: 80px;
+            width: 100%;
+            z-index: 1;
+            content: '';
+            left: 0;
+            top: 0;
+        }
+    }
+    .logo{
+        z-index: 2;
+        img{
+            height: 51px;
+            @media screen and (max-width: 720px){
+                height: 40px;
+            }
+        }
+    }
+    nav{
+        @media screen and (max-width: 720px){
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            line-height: 2.5;
+            transition: all 0.2s ease 0s;
+            background-color: $blue;
+            width: 100%;
+            z-index: 0;
+            transform: translateY(-100%);
+            &.active{
+                transform: translateY(0);
+            }
+            box-shadow: 5px 5px 31px 5px rgba(0,0,0,0.2);   
+        }
+        a{
+            padding-left: 12px;
+            padding-right: 12px;
+            font-weight: 300;
+            transition: .2s;
+            &:hover{
+                color: white;
+            }
+        }
+    }
+}

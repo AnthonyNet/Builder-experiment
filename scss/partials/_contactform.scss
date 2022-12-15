@@ -1,0 +1,104 @@
+.contactform{
+
+
+    .form{
+        padding: 50px;
+        @media screen and (max-width: 750px) {
+            padding: 20px;
+        }
+        padding-top: 24px;
+        background-color: $dark-blue;
+        color: white;
+
+        max-width: 850px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        border-radius: 16px;
+        box-shadow: 0px 0px 46px rgba(0, 0, 0, 0.05);
+        & > p{
+            margin-top: 35px;
+        }
+
+        & > .text-19{
+            margin-bottom: 27px;
+            margin-top: 0;
+        }
+
+        &__select{
+            margin-top: 14px;
+            display: flex;
+            gap: 10px;
+            row-gap: 22px;
+            flex-wrap: wrap;
+            padding-top: 10px;
+            &-item{
+                height: 33px;
+            }
+            label{
+                cursor: pointer;
+                box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.1);
+            }
+            input{
+                display: none;
+            }
+        }
+
+        
+    }
+
+
+    input[type=text]{
+        box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.1);
+        border: unset;
+        border: 30px;
+        height: 33px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: none !important;
+        box-sizing: border-box;
+        color: white;
+        font-size: 16px;
+        border-radius: 12px;
+        background-color: $blue-light;
+    }
+}
+
+.label-for-check {
+    padding: 10px 14px;
+    border: 2px solid $blue-light;
+    border-radius: 16px;
+    opacity: .3;
+    transition: .1s;
+    &:hover{
+        opacity: .5;
+    }
+}
+
+.check-with-label:checked + .label-for-check {
+    color: white;
+    background-color: $red;
+    border-color: $red;
+    opacity: 1;
+  }
+
+.check-with-label2:checked + .label-for-check {
+    color: white;
+    background-color: $red;
+  }
+
+.input{
+    &__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 45px;
+        row-gap: 16px;
+        @media screen and (max-width: 750px) {
+            grid-template-columns: 1fr;
+        }
+    }
+    &__group{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+}
