@@ -116,6 +116,9 @@ html {
     font-size: 34px;
   }
 }
+.text-39 {
+  font-size: 39px;
+}
 .text-36 {
   font-size: 36px;
 }
@@ -508,6 +511,10 @@ textarea:focus {
     padding-top: 80px;
   }
 }
+.mainscreen__content {
+  padding-top: 150px;
+  padding-bottom: 123px;
+}
 
 .blanklinks {
   background-color: rgba(0, 0, 0, 0.2);
@@ -554,7 +561,6 @@ textarea:focus {
   padding-top: 24px;
   background-color: rgba(0, 0, 0, 0.2);
   color: white;
-  max-width: 850px;
   box-sizing: border-box;
   margin: 0 auto;
   border-radius: 16px;
@@ -1237,6 +1243,28 @@ textarea:focus {
 }
 .services .lSAction > a {
   top: calc(100% - 25px);
+}
+.services__description {
+  max-width: 854px;
+  text-align: left;
+  margin-left: 0;
+}
+.services__description p {
+  margin-left: 0;
+  margin-right: auto;
+  line-height: 1.7;
+}
+.services__description .text-39 {
+  margin-bottom: 16px;
+}
+.services__description > .text-18, .services__description .servicess_description-plus {
+  margin-bottom: 80px;
+}
+.services__description .servicess_description-plus p {
+  margin-bottom: 2px;
+}
+.services__description .df {
+  margin-bottom: 101px;
 }
 
 .slideshowflex {

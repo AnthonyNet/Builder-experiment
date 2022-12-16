@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="/public/css/min/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>F13Cybertech</title>
+    
+    <meta name="description" content="Kontaktujte nás pomoci formuláře na našem webu nebo prostřednictvím tel. - ">
+    <meta name="author" content="F13Cybertech s.r.o.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <link rel="dns-prefetch" href="//www.google.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//use.fontawesome.com">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    <div class="mainscreen">
+        <header class="container header" x-data="{menuOpen : false}" @click.away="menuOpen = false">
+            <a href="/" class="logo"><img src="/public/img/f13cybertech_logo.svg" alt=""></a>
+            <nav :class="menuOpen ? 'active' : ''">
+                <a href="" class="text-graylight text-18 text-small">Služby</a>
+                <a href="" class="text-graylight text-18 text-small">Školení</a>
+                <a href="" class="text-graylight text-18 text-small">E-shop</a>
+                <a href="" class="text-graylight text-18 text-small">Blog</a>
+                <a href="" class="text-graylight text-18 text-small">O nás</a>
+                <a href="" class="text-graylight text-18 text-small">Kontakt</a>
+            </nav>
+            <div class="hamburgericon" @click="menuOpen = ! menuOpen" :class="menuOpen ? 'active' : ''">
+                <span class="span">M</span>
+                <div class="hamburgericon-content">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </header>
+
+        <div class="mainscreen__content container">
+            <div class=" slideshow__main-item">
+                <div class="df jst-b">
+                    <div>
+                        <p class="text-48 text-white text-bold">Segmentace sítě </p>
+                        <p class="text-18 text-regular text-graylight">Mějte ve Vaší síti řád a pořádek!</p>
+                        <div class="buttons">
+                            <a href="" class="btn-primary">Chci segmentaci sítě</a>
+                        </div>
+                    </div>
+                    <div class="slideshow__main-item-image"><img src="/public/img/slideshow_3.svg" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="services__description">
+            <p class="text-39 text-white text-bold">O službě</p>
+            <p class="text-graylight text-18 text-regular">Představte si Vaši podnikovou síť jako pevnost ohraničenou zdí. Podaří-li se útočníkovi přelézt zeď, může si uvnitř vaší pevnosti dělat, co se mu zlíbí. Pokud ale rozdělíte Vaši pevnost na více segmentů, každý chráněný svou vlastní zdí, snížíte tím útočníkovu šanci k tomu, aby se dostal k citlivým datům. Tím se výrazně navýší bezpečnost sítě a zároveň se zvýší její dostupnost. Dojde  li k problému v jednom síťovém segmentu, jeho dopad se nemůže dále šířit.</p>
+
+            <p class="text-39 text-white text-bold">Přidaná hodnota </p>
+            <div class="servicess_description-plus">
+                <p class="text-graylight text-18 text-regular"><span class="text-red">+</span> VStabilní a zabezpečená podniková síť</p>
+                <p class="text-graylight text-18 text-regular"><span class="text-red">+</span> VRozčlenění podnikové sítě na segmenty</p>
+                <p class="text-graylight text-18 text-regular"><span class="text-red">+</span> VSíťový provoz pod Vaší kontrolou</p>
+                <p class="text-graylight text-18 text-regular"><span class="text-red">+</span> VUdělování práv k přístupu do jednotlivých segmentů</p>
+                <p class="text-graylight text-18 text-regular"><span class="text-red">+</span> VPodrobné logování síťového provozu</p>
+                <p class="text-graylight text-18 text-regular"><span class="text-red">+</span> VMožnost monitoringu připojených/odpojených a detekce podezřelého chování</p>
+
+            </div>
+
+            <p class="text-39 text-white text-bold">Proč tuto službu zvolit?</p>
+            <p class="text-graylight text-18 text-regular">Ochraňte svá data díky zvýšenému zabezpečení jednotlivých segmentů sítě. Šetřete náklady za zaměstnance, kteří kvůli pomalé a přehlcené podnikové síti nemohou pracovat. Zajistěte kontinuitu provozu a nedovolte, aby kybernetický útok paralyzoval celou podnikovou síť.</p>
+
+            <div class="df">
+                <a href="" class="btn-primary">Chci segmentaci sítě</a>
+            </div>
+        </div>
+    </div>
+
+ 
+
+    <footer class="footer container">
+        <div class="contactform" id="#kontakt">
+            <form action="" id="contact_form" class="form">
+                <p class="text-center text-19 text-black text-medium">Vyplňte formulář a naši specialisté Vás kontaktují.</p>
+                <div class="input__container">
+                    <div class="input__group">
+                        <label for="name">Jméno*</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="input__group">
+                        <label for="tel">Telefón*</label>
+                        <input type="text" name="tel" required>
+                    </div>
+                    <div class="input__group">
+                        <label for="surname">Přijímení*</label>
+                        <input type="text" name="surname" required>
+                    </div>
+                    <div class="input__group">
+                        <label for="mail">Email*</label>
+                        <input type="text" name="mail" required>
+                    </div>
+                </div>
+
+                <p class="text-gray text-16 texd-medium">Vyberte služby o které máte zájem</p>
+                <div class="form__select">
+                    <div class="form__select-item">
+                        <input type="checkbox" name="8" class="check-with-label" id="item8" />
+                        <label class="label-for-check" for="item8">Antivirové řešení</label>
+                    </div>
+
+                    <div class="form__select-item">
+                        <input type="checkbox" name="1" class="check-with-label" id="item1" />
+                        <label class="label-for-check" for="item1">Antivirové zabezpečení</label>
+                    </div>
+
+                    <div class="form__select-item">
+                        <input type="checkbox" name="13" class="check-with-label" id="item13" />
+                        <label class="label-for-check" for="item13">Bezpečnostní konfigurace</label>
+                    </div>
+                    
+                    <div class="form__select-item">
+                        <input type="checkbox" name="10" class="check-with-label" id="item10" />
+                        <label class="label-for-check" for="item10">Bezpečná pošta</label>
+                    </div>
+
+                    <div class="form__select-item">
+                        <input type="checkbox" name="14" class="check-with-label" id="item14" />
+                        <label class="label-for-check" for="item14">Bezpečnostní školení</label>
+                    </div>
+                    
+                    <div class="form__select-item">
+                        <input type="checkbox" name="12" class="check-with-label" id="item12" />
+                        <label class="label-for-check" for="item12">Evidence požadavků</label>
+                    </div>
+                    
+                    <div class="form__select-item">
+                        <input type="checkbox" name="2" class="check-with-label" id="item2" />
+                        <label class="label-for-check" for="item2">Firewall</label>
+                    </div>
+                    
+                    <div class="form__select-item">
+                        <input type="checkbox" name="5" class="check-with-label" id="item5" />
+                        <label class="label-for-check" for="item5">IT audit</label>
+                    </div>
+
+                    <div class="form__select-item">
+                        <input type="checkbox" name="11" class="check-with-label" id="item11" />
+                        <label class="label-for-check" for="item11">Monitorovací systém</label>
+                    </div>
+
+                    
+                    <div class="form__select-item">
+                        <input type="checkbox" name="3" class="check-with-label" id="item3" />
+                        <label class="label-for-check" for="item3">Penetrační testování</label>
+                    </div>
+
+                    <div class="form__select-item">
+                        <input type="checkbox" name="7" class="check-with-label" id="item7" />
+                        <label class="label-for-check" for="item7">Pravidelná kontrola</label>
+                    </div>
+
+                    <div class="form__select-item">
+                        <input type="checkbox" name="4" class="check-with-label" id="item4" />
+                        <label class="label-for-check" for="item4">Řízení rizik</label>
+                    </div>
+                    
+                    <div class="form__select-item">
+                        <input type="checkbox" name="6" class="check-with-label" id="item6" />
+                        <label class="label-for-check" for="item6">Segmentace sítě</label>
+                    </div>
+                    
+                    <div class="form__select-item">
+                        <input type="checkbox" name="15" class="check-with-label" id="item15" />
+                        <label class="label-for-check" for="item15">Servisní balíček</label>
+                    </div>
+
+                    <div class="form__select-item">
+                        <input type="checkbox" name="9" class="check-with-label" id="item9" />
+                        <label class="label-for-check" for="item9">Zálohovací řešení</label>
+                    </div>
+                
+                    
+
+                    
+                </div>
+
+                <textarea class="textarea text-16" placeholder="Chcete něco dodat?" name="" id="" cols="30" rows="10"></textarea>
+                
+            </form>
+       </div>
+
+        <div class="footer__content">
+            <div class="footer__content-top">
+                <img src="/public/img/ikona_kontakt.svg" alt="">
+                <div class="footer__content-top-contact">
+                    <h2 class="text-white text-36">Kontakt</h2>
+                    <a href="tel:+420704936347" class="text-white text-20 df alg-c"><img src="/public/img/phone.svg" alt="">&nbsp;&nbsp;+420 704 936 347</a>
+                </div>
+            </div>
+            <br>
+            <a class="text-18 text-white" href="https://www.google.com/maps/place/S.+T%C5%AFmy+1099%2F1,+709+00+Ostrava-Mari%C3%A1nsk%C3%A9+Hory+a+Hulv%C3%A1ky/@49.8264815,18.2444265,17z/data=!3m1!4b1!4m8!1m2!2m1!1sF13+CyberTech+s.r.o.+Sokola+T%C5%AFmy+1099%2F1,+Ostrava+709+00!3m4!1s0x4713e371072a8d61:0x8f8e5626c359abd6!8m2!3d49.8264781!4d18.2466152" target="_blank" rel="noopener noreferrer">F13 CyberTech s.r.o. <br>Sokola Tůmy 1099/1, Ostrava 709 00</a>
+            <br>
+            <br>
+            <p class="text-18 text-graylight">IČ: 066 <span class="dn">x</span> 46 654 | DIČ: CZ06646654 <br>Datová schránka: 874v5y8 <br>Spisová značka 72754 C, Krajský soud v Ostravě </p>
+            <br>
+            
+            <p class="text-medium text-white text-18">Obecné dotazy:</p>
+            <a href="mailto:info@f13cybertech.cz" class="text-white df alg-c">
+                <br><img src="/public/img/mail.svg" class="icon-mail" alt="">info@f13cybertech.cz</a>
+            <br>
+            <p class="text-medium text-white text-18">Zasílání faktur:</p>
+            <a href="mailto:faktury@f13cybertech.cz" class="text-white df alg-c">
+                <br><img src="/public/img/mail.svg" class="icon-mail" alt="">faktury@f13cybertech.cz</a>
+            <br>
+            <p class="text-medium text-white text-18">Marketing a komunikace:</p>
+            <a href="mailto:marketing@f13cybertech.cz" class="text-white df alg-c">
+                <br><img src="/public/img/mail.svg" class="icon-mail" alt="">marketing@f13cybertech.cz</a>
+
+            <br>
+        </div>
+    </footer>
+    <script src="/public/js/alpine.js" padefer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/public/js/lightslider.js"></script>
+    <script src="/public/js/script.js"></script>
+</body>
+</html>

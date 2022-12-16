@@ -88,6 +88,34 @@
     .lSAction > a {
         top: calc(100% - 25px);
     }
+
+    &__description{
+        max-width: 854px;
+        text-align: left;
+        margin-left: 0;
+        p{
+            margin-left: 0;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+        .text-39{
+            margin-bottom: 16px;
+        }
+        & > .text-18, .servicess_description-plus{
+            margin-bottom: 80px;
+        }
+        .servicess_description-plus{
+            p{
+                margin-bottom: 2px;
+            }
+        }
+
+        .df{
+            margin-bottom: 101px;
+        }
+
+
+    }
 }
 
 .slideshowflex{
