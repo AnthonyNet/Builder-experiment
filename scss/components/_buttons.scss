@@ -12,6 +12,20 @@
         background-color: $red;
         position: relative;
         transition: .3s;
+        &.blue{
+            background-color: $blue;
+            background-color: #5C779C;
+            color: white;
+            border-color: #5C779C;
+           }
+           &.white{
+                background-color: white;
+                color: black;
+                border-color: white;
+                &:after{
+                    filter: invert(1);
+                }
+           }
         &:after{
             position: absolute;
             content: '';

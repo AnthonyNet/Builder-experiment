@@ -32,12 +32,12 @@
         <header class="container header" x-data="{menuOpen : false}" @click.away="menuOpen = false">
             <a href="/" class="logo"><img src="/public/img/f13cybertech_logo.svg" alt=""></a>
             <nav :class="menuOpen ? 'active' : ''">
-                <a href="" class="text-graylight text-18 text-small">Služby</a>
-                <a href="" class="text-graylight text-18 text-small">Školení</a>
-                <a href="" class="text-graylight text-18 text-small">E-shop</a>
-                <a href="" class="text-graylight text-18 text-small">Blog</a>
-                <a href="" class="text-graylight text-18 text-small">O nás</a>
-                <a href="" class="text-graylight text-18 text-small">Kontakt</a>
+                <a href="#sluzby" class="text-graylight text-18 text-small">Služby</a>
+                <a href="https://eshop.f13cybertech.cz" target="_blank" class="text-graylight text-18 text-small">Školení</a>
+                
+                
+                <a href="/#o-nas" class="text-graylight text-18 text-small">O nás</a>
+                <a href="#kontakt" class="text-graylight text-18 text-small">Kontakt</a>
             </nav>
             <div class="hamburgericon" @click="menuOpen = ! menuOpen" :class="menuOpen ? 'active' : ''">
                 <span class="span">M</span>
@@ -59,7 +59,7 @@
                             <a href="" class="btn-primary">Chci pravidelnou kontrolu</a>
                         </div>
                     </div>
-                    <div class="slideshow__main-item-image"><img src="/public/img/slideshow_3.svg" alt=""></div>
+                    <div class="slideshow__main-item-image"><img src="/public/img/services/pravidelna-kontrola.svg" alt=""></div>
                 </div>
             </div>
         </div>
@@ -89,9 +89,9 @@
 
  
 
-    <footer class="footer container">
-        <div class="contactform" id="#kontakt">
-            <form action="" id="contact_form" class="form">
+    <footer class="footer container" id="kontakt">
+        <div class="contactform">
+            <form action="/mail.php" id="contactform" class="form">
                 <p class="text-center text-19 text-black text-medium">Vyplňte formulář a naši specialisté Vás kontaktují.</p>
                 <div class="input__container">
                     <div class="input__group">
@@ -99,8 +99,8 @@
                         <input type="text" name="name" required>
                     </div>
                     <div class="input__group">
-                        <label for="tel">Telefón*</label>
-                        <input type="text" name="tel" required>
+                        <label for="phone">Telefon*</label>
+                        <input type="text" name="phone" required>
                     </div>
                     <div class="input__group">
                         <label for="surname">Přijímení*</label>
@@ -115,79 +115,73 @@
                 <p class="text-gray text-16 texd-medium">Vyberte služby o které máte zájem</p>
                 <div class="form__select">
                     <div class="form__select-item">
-                        <input type="checkbox" name="8" class="check-with-label" id="item8" />
-                        <label class="label-for-check" for="item8">Antivirové řešení</label>
-                    </div>
-
-                    <div class="form__select-item">
-                        <input type="checkbox" name="1" class="check-with-label" id="item1" />
+                        <input type="checkbox" name="az" class="check-with-label" id="item1" />
                         <label class="label-for-check" for="item1">Antivirové zabezpečení</label>
                     </div>
 
                     <div class="form__select-item">
-                        <input type="checkbox" name="13" class="check-with-label" id="item13" />
+                        <input type="checkbox" name="bk" class="check-with-label" id="item13" />
                         <label class="label-for-check" for="item13">Bezpečnostní konfigurace</label>
                     </div>
                     
                     <div class="form__select-item">
-                        <input type="checkbox" name="10" class="check-with-label" id="item10" />
+                        <input type="checkbox" name="bp" class="check-with-label" id="item10" />
                         <label class="label-for-check" for="item10">Bezpečná pošta</label>
                     </div>
 
                     <div class="form__select-item">
-                        <input type="checkbox" name="14" class="check-with-label" id="item14" />
+                        <input type="checkbox" name="bs" class="check-with-label" id="item14" />
                         <label class="label-for-check" for="item14">Bezpečnostní školení</label>
                     </div>
                     
                     <div class="form__select-item">
-                        <input type="checkbox" name="12" class="check-with-label" id="item12" />
+                        <input type="checkbox" name="ep" class="check-with-label" id="item12" />
                         <label class="label-for-check" for="item12">Evidence požadavků</label>
                     </div>
                     
                     <div class="form__select-item">
-                        <input type="checkbox" name="2" class="check-with-label" id="item2" />
-                        <label class="label-for-check" for="item2">Firewall</label>
+                        <input type="checkbox" name="fw" class="check-with-label" id="fw" />
+                        <label class="label-for-check" for="fw">Firewall</label>
                     </div>
                     
                     <div class="form__select-item">
-                        <input type="checkbox" name="5" class="check-with-label" id="item5" />
-                        <label class="label-for-check" for="item5">IT audit</label>
+                        <input type="checkbox" name="ia" class="check-with-label" id="ia" />
+                        <label class="label-for-check" for="ia">IT audit</label>
                     </div>
 
                     <div class="form__select-item">
-                        <input type="checkbox" name="11" class="check-with-label" id="item11" />
-                        <label class="label-for-check" for="item11">Monitorovací systém</label>
-                    </div>
-
-                    
-                    <div class="form__select-item">
-                        <input type="checkbox" name="3" class="check-with-label" id="item3" />
-                        <label class="label-for-check" for="item3">Penetrační testování</label>
+                        <input type="checkbox" name="ms" class="check-with-label" id="ms" />
+                        <label class="label-for-check" for="ms">Monitorovací systém</label>
                     </div>
 
                     <div class="form__select-item">
-                        <input type="checkbox" name="7" class="check-with-label" id="item7" />
-                        <label class="label-for-check" for="item7">Pravidelná kontrola</label>
+                        <input type="checkbox" name="pt" class="check-with-label" id="pt" />
+                        <label class="label-for-check" for="pt">Penetrační testování</label>
                     </div>
 
                     <div class="form__select-item">
-                        <input type="checkbox" name="4" class="check-with-label" id="item4" />
-                        <label class="label-for-check" for="item4">Řízení rizik</label>
+                        <input type="checkbox" name="pk" class="check-with-label" id="pk" />
+                        <label class="label-for-check" for="pk">Pravidelná kontrola</label>
                     </div>
-                    
+
                     <div class="form__select-item">
-                        <input type="checkbox" name="6" class="check-with-label" id="item6" />
-                        <label class="label-for-check" for="item6">Segmentace sítě</label>
+                        <input type="checkbox" name="rz" class="check-with-label" id="rz" />
+                        <label class="label-for-check" for="rz">Řízení rizik</label>
                     </div>
                     
                     <div class="form__select-item">
-                        <input type="checkbox" name="15" class="check-with-label" id="item15" />
-                        <label class="label-for-check" for="item15">Servisní balíček</label>
+                        <input type="checkbox" name="ss" class="check-with-label" id="ss" />
+                        <label class="label-for-check" for="ss">Segmentace sítě</label>
+                    </div>
+                    
+                    <div class="form__select-item">
+                        <input type="checkbox" name="sb" class="check-with-label" id="sb" />
+                        <label class="label-for-check" for="sb">Servisní balíček</label>
                     </div>
 
                     <div class="form__select-item">
-                        <input type="checkbox" name="9" class="check-with-label" id="item9" />
-                        <label class="label-for-check" for="item9">Zálohovací řešení</label>
+                        <input type="checkbox" name="zr" class="check-with-label" id="zr" />
+                        <label class="label-for-check" for="zr">Zálohovací řešení</label>
                     </div>
                 
                     
@@ -197,7 +191,10 @@
 
                 <textarea class="textarea text-16" placeholder="Chcete něco dodat?" name="" id="" cols="30" rows="10"></textarea>
                 
-            </form>
+            <p class="forminfo text-graylight">Veškeré ceny služeb s Vámi probereme po zjištění všech potřebných informacích.</p>
+            <button type="submit" class="btn-primary white">Odeslat</button>
+            <div class="success">Úspěšně jsme obdrželi Váš email, v blízké době Vás budeme kontaktovat!</div>  
+</form>
        </div>
 
         <div class="footer__content">
@@ -205,7 +202,7 @@
                 <img src="/public/img/ikona_kontakt.svg" alt="">
                 <div class="footer__content-top-contact">
                     <h2 class="text-white text-36">Kontakt</h2>
-                    <a href="tel:+420704936347" class="text-white text-20 df alg-c"><img src="/public/img/phone.svg" alt="">&nbsp;&nbsp;+420 704 936 347</a>
+                    <a href="tel:+420704936347" class="text-white text-20 df alg-c"><img src="/public/img/components/phone.svg" alt="">&nbsp;&nbsp;+420 704 936 347</a>
                 </div>
             </div>
             <br>
@@ -217,15 +214,15 @@
             
             <p class="text-medium text-white text-18">Obecné dotazy:</p>
             <a href="mailto:info@f13cybertech.cz" class="text-white df alg-c">
-                <br><img src="/public/img/mail.svg" class="icon-mail" alt="">info@f13cybertech.cz</a>
+                <br><img src="/public/img/components/mail.svg" class="icon-mail" alt="">info@f13cybertech.cz</a>
             <br>
             <p class="text-medium text-white text-18">Zasílání faktur:</p>
             <a href="mailto:faktury@f13cybertech.cz" class="text-white df alg-c">
-                <br><img src="/public/img/mail.svg" class="icon-mail" alt="">faktury@f13cybertech.cz</a>
+                <br><img src="/public/img/components/mail.svg" class="icon-mail" alt="">faktury@f13cybertech.cz</a>
             <br>
             <p class="text-medium text-white text-18">Marketing a komunikace:</p>
             <a href="mailto:marketing@f13cybertech.cz" class="text-white df alg-c">
-                <br><img src="/public/img/mail.svg" class="icon-mail" alt="">marketing@f13cybertech.cz</a>
+                <br><img src="/public/img/components/mail.svg" class="icon-mail" alt="">marketing@f13cybertech.cz</a>
 
             <br>
         </div>

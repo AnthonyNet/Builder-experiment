@@ -1,6 +1,11 @@
 .contactform{
 
-
+    p.forminfo{
+        font-style: italic;
+        font-weight: 300 !important;
+        opacity: .8;
+        margin-top: 8px !important;
+    }
     .form{
         padding: 50px;
         @media screen and (max-width: 750px) {
@@ -42,7 +47,10 @@
                 display: none;
             }
         }
-
+        button{
+            margin-top: 20px;
+            margin-left: auto;
+        }
         
     }
 
@@ -100,5 +108,29 @@
         display: flex;
         flex-direction: column;
         gap: 6px;
+    }
+}
+
+.success {
+    display: none;
+    background: #E1F8ED;
+    padding: 20px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    justify-content: flex-end;
+    &.is-active {
+      display: flex;
+    }
+}
+
+.failed{
+    display: none;
+    background: #f8e1e1;
+    padding: 20px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    justify-content: flex-end;
+    &.is-active {
+        display: flex;
     }
 }

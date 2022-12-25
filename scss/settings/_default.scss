@@ -1,5 +1,9 @@
 $show_mobile_menu_at : 850px;
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
     overflow-x: hidden;
