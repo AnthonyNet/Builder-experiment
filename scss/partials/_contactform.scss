@@ -113,11 +113,12 @@
 
 .success {
     display: none;
-    background: #E1F8ED;
+    background: #41d78f;
     padding: 20px;
     margin-top: 16px;
     margin-bottom: 16px;
     justify-content: flex-end;
+    color: $dark-blue;
     &.is-active {
       display: flex;
     }

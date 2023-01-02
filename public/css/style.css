@@ -682,11 +682,12 @@ textarea:focus {
 
 .success {
   display: none;
-  background: #E1F8ED;
+  background: #41d78f;
   padding: 20px;
   margin-top: 16px;
   margin-bottom: 16px;
   justify-content: flex-end;
+  color: rgba(0, 0, 0, 0.2);
 }
 .success.is-active {
   display: flex;
@@ -1153,8 +1154,7 @@ textarea:focus {
 }
 @media screen and (max-width: 650px) {
   .slideshow__main-item-image img {
-    position: relative;
-    left: -40px;
+    margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 650px) {
