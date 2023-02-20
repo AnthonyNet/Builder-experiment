@@ -1,1 +1,0 @@
-- vscode extension for compile scss: https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass
