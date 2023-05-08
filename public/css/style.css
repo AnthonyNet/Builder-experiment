@@ -376,8 +376,7 @@ textarea:focus {
   border-width: 2px;
   border-style: solid;
   border-color: rgb(239, 64, 65);
-  -o-border-image: initial;
-     border-image: initial;
+  border-image: initial;
   transition: all 0.2s ease 0s;
   padding: 6px;
   display: none;
@@ -426,6 +425,9 @@ textarea:focus {
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: #1b283b;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 @media screen and (max-width: 720px) {
   .header {
@@ -665,8 +667,7 @@ textarea:focus {
 .input__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  -moz-column-gap: 45px;
-       column-gap: 45px;
+  column-gap: 45px;
   row-gap: 16px;
 }
 @media screen and (max-width: 750px) {
@@ -709,6 +710,7 @@ textarea:focus {
   overflow: hidden;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
+  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -735,10 +737,16 @@ textarea:focus {
 }
 
 .lSSlideWrapper .lSSlide {
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
   -webkit-transition: all 1s;
+  -webkit-transition-property: -webkit-transform, height;
+  -moz-transition-property: -moz-transform, height;
   transition-property: transform, height;
+  -webkit-transition-duration: inherit !important;
   transition-duration: inherit !important;
+  -webkit-transition-timing-function: inherit !important;
   transition-timing-function: inherit !important;
 }
 
@@ -757,9 +765,13 @@ textarea:focus {
 
 .lSSlideWrapper.usingCss .lSFade > * {
   opacity: 0;
+  -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  -webkit-transition-duration: inherit !important;
   transition-duration: inherit !important;
+  -webkit-transition-property: opacity;
   transition-property: opacity;
+  -webkit-transition-timing-function: inherit !important;
   transition-timing-function: inherit !important;
 }
 
@@ -797,6 +809,7 @@ textarea:focus {
   position: relative;
   border: 1px solid #1b283b;
   z-index: 99;
+  -webkit-transition: all 0.5s linear 0s;
   transition: all 0.5s linear 0s;
 }
 
@@ -829,6 +842,7 @@ textarea:focus {
   -moz-transition-property: -moz-transform;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
+  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -836,6 +850,7 @@ textarea:focus {
 
 .lSSlideOuter .lSPager.lSGallery li {
   overflow: hidden;
+  -webkit-transition: border-radius 0.12s linear 0s 0.35s linear 0s;
   transition: border-radius 0.12s linear 0s 0.35s linear 0s;
 }
 
@@ -871,6 +886,7 @@ textarea:focus {
   z-index: 99;
   margin-top: -16px;
   opacity: 0.5;
+  -webkit-transition: opacity 0.35s linear 0s;
   transition: opacity 0.35s linear 0s;
 }
 
@@ -1089,6 +1105,7 @@ textarea:focus {
 /*/  GRab cursor */
 .lightSlider.lsGrab > * {
   cursor: -webkit-grab;
+  cursor: -moz-grab;
   cursor: -o-grab;
   cursor: -ms-grab;
   cursor: grab;
@@ -1097,6 +1114,7 @@ textarea:focus {
 .lightSlider.lsGrabbing > * {
   cursor: move;
   cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
   cursor: -o-grabbing;
   cursor: -ms-grabbing;
   cursor: grabbing;
