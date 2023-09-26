@@ -1,114 +1,39 @@
-# F13 Portal
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Development
+## Getting Started
 
-- php8.2
-- vscode extension for compile scss: <https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass>
-
-## Build
-
-### Install PHP 8.2
+First, run the development server:
 
 ```bash
-sudo dnf update -y
-sudo dnf install epel-release -y
-sudo dnf install dnf-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm -y
-sudo dnf module list php
-sudo dnf module reset php
-sudo dnf module enable php:remi-8.2
-sudo dnf install php -y
-php --version
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
 ```
 
-### Install SASS and generate css
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```bash
-sudo dnf install nodejs -y
-npm install -g sass
-sass --update scss/style.scss:public/css/style.css
-sass --update scss/style.scss:public/css/min/style.min.css --style compressed
-```
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-### Install and configure nginx
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-```bash
-sudo dnf update -y
-sudo dnf install nginx certbot -y
-certbot run --nginx -d f13cybertech.cz -d www.f13cybertech.cz
-cat > /etc/nginx/sites-available/www.f13cybertech.cz.conf <<"EOF"
-server {
-  server_name www.f13cybertech.cz f13cybertech.cz;
-  access_log /var/log/nginx/vhost/www.f13cybertech.com-access.log;
-  error_log /var/log/nginx/vhost/www.f13cybertech.com-error.log;
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-  listen 443 ssl;
-  ssl_certificate /etc/letsencrypt/live/app06.f13cybertech.com/fullchain.pem;
-  ssl_certificate_key /etc/letsencrypt/live/app06.f13cybertech.com/privkey.pem;
-  include /etc/letsencrypt/options-ssl-nginx.conf;
-  ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-  root /var/www/f13cybertech.cz;
-  index index.html index.htm;
+## Learn More
 
-  location / {
-    default_type "text/html";
-    try_files $uri.html $uri $uri/ =404;
-  }
+To learn more about Next.js, take a look at the following resources:
 
-  location = /favicon.ico {
-      log_not_found off;
-      access_log off;
-  }
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-  location = /robots.txt {
-      allow all;
-      log_not_found off;
-      access_log off;
-  }
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-#  location ~ /.* {
-#      deny all;
-#  }
+## Deploy on Vercel
 
-  location ~* ^.+.(js|css|swf|xml|txt|ogg|ogv|svg|svgz|eot|otf|woff|mp4|ttf|rss|atom|jpg|jpeg|gif|png|ico|zip|tgz|gz|rar|bz2|doc|xls|exe|ppt|tar|mid|midi|wav|bmp|rtf)$ {
-     access_log off;
-     log_not_found off;
-     expires 30d;
-     add_header Pragma no-cache;
-     add_header Cache-Control "public";
-  }
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-}
-
-server {
-  if ($host = www.f13cybertech.cz) {
-      return 301 https://$host$request_uri;
-  } # managed by Certbot
-
-  if ($host = f13cybertech.cz) {
-      return 301 https://$host$request_uri;
-  } # managed by Certbot
-
-  server_name www.f13cybertech.cz f13cybertech.cz;
-  listen 80;
-  return 404;
-}
-EOF
-ln -s /etc/nginx/sites-available/www.f13cybertech.cz.conf /etc/nginx/sites-enabled/www.f13cybertech.cz.conf
-nginx -t
-systemctl enable --now nginx
-systemctl status nginx
-```
-
-## Deploy
-
-```bash
-ssh-keygen -t ed25519 -C "adam@f13cybertech.com"
-git clone git@git.f13cybertech.com:f13-apps/f13-portal.git /var/www/f13cybertech.cz
-chmod 755 /var/www/f13cybertech.cz/
-cd /var/www/f13cybertech.cz
-sass --update scss/style.scss:public/css/style.css
-sass --update scss/style.scss:public/css/min/style.min.css --style compressed
-find . -type f -exec chmod 644 -- {} +
-find . -type d -exec chmod 755 -- {} +
-```
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Builder-experiment

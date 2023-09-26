@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--foreground-rgb: 255, 255, 255;
+		--background-start-rgb: 0, 0, 0;
+		--background-end-rgb: 0, 0, 0;
+	}
+}
+
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+	background-color: #4288eb;
+	width: 100vw;
+}
+
+body {
+
+	color: rgb(var(--foreground-rgb));
+	background: linear-gradient(
+			to bottom,
+			transparent,
+			rgb(var(--background-end-rgb))
+		)
+		rgb(var(--background-start-rgb));
+}
+
+.first-letter ::first-letter {
+  font-size: 400%;
+  font-weight: bold;
+  color: #F25944 !important;
+  float: left;
+  margin: 12px 2px 2px 0px;
+}
+
+.btn-primary {
+	position: relative;
+	transition: 0.3s;
+}
+
+.btn-primary::before {
+	font-size: 30px;
+	content: "»"; /* HTML symbol for right arrow */
+	position: absolute;
+	top: 43%;
+	right: 10px; /* Adjust the right positioning as needed */
+	transform: translateY(-50%);
+	opacity: 0;
+	transition: 0.3s;
+}
+
+.btn-primary:hover::before {
+	opacity: 1;
+	right: 2px; /* Adjust the right positioning on hover as needed */
+}
+
+.btn-primary.blue {
+	background-color: #1b283b;
+	background-color: #5c779c;
+	color: white;
+	border-color: #5c779c;
+}
+.btn-primary.white {
+	background-color: white;
+	color: black;
+	border-color: white;
+}
+.btn-primary.white:after {
+	filter: invert(1);
+}
+
+.btn-primary:hover {
+	padding-right: 50px;
+}
+.btn-primary:hover:after {
+	opacity: 1;
+	right: 12px;
+}
+
+.formButton:has(input[type="checkbox"]:checked) {
+	background: #ef4041;
+    border: 2px solid #ef4041;
+	opacity: 1;
+	color: white;
+}
+@media screen and (max-width: 700px) {
+	.carousel-1 .__item{padding: 4%;margin: auto;}
+
+}
+
+@media screen and (max-width: 640px) {
+	.carousel-1 .__item{width: 70%; height: 150px;}
+}
+
+@media screen and (max-height: 600px) {
+	.__section__one{height: auto !important;}
+	.__custom-carousel-item{height: auto !important;}
+	.__section__one h1 {margin-top: 35px;}
+	.__section__one h2{font-size: 50px;}
+}
+
+.feedback > a{
+	transition: 1.3s;
+
+}
+.feedback > a:hover {
+-webkit-box-shadow: -1px 7px 27px 3px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 7px 27px 3px rgba(0,0,0,0.75);
+box-shadow: -1px 7px 27px 3px rgba(0,0,0,0.75);
+}
