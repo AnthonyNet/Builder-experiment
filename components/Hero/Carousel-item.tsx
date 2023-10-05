@@ -34,7 +34,7 @@ export default function CarouselItem(props: Props) {
 						<span>{paragraph}</span>
 					</p>
 
-					<div className="w-full flex flex-col justify-center max-sm:items-center  sm:flex-row lg:justify-start self-center lg:mr-auto">
+					<div className="w-full flex flex-col justify-center max-sm:items-center  sm:flex-row lg:justify-start self-center lg:mr-auto text-md">
 						<a
 							href={button1Link}
 							className=" btn-primary  text-white text-center cursor-pointer w-auto  bg-[rgba(239,64,65,1)] px-[35px] py-[15px] rounded-[15px] max-sm:px-[15px] max-sm:py-[10px] max-sm:mt-4">
@@ -42,7 +42,7 @@ export default function CarouselItem(props: Props) {
 						</a>
 						<a
 							href={button2Link}
-							className=" text-black text-center cursor-pointer w-auto  bg-white sm:ml-[10px] px-[35px] py-[15px] rounded-[15px] max-sm:px-[15px] max-sm:py-[10px] max-sm:mt-4">
+							className="btn-primary text-black text-center cursor-pointer w-auto  bg-white sm:ml-[10px] px-[35px] py-[15px] rounded-[15px] max-sm:px-[15px] max-sm:py-[10px] max-sm:mt-4">
 							{button2}
 						</a>
 					</div>

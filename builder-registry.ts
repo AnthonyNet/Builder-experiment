@@ -1,5 +1,9 @@
-import { Builder } from "@builder.io/react";
+import { Builder, withChildren } from "@builder.io/react";
 import dynamic from "next/dynamic";
+import Tabs from "./components/Tabs/Tabs";
+
+const imageUrl = "https://cdn.builder.io/api/v1/image/assets%2Fpwgjf0RoYWbdnJSbpBAjXNRMe9F2%2Ffb27a7c790324294af8be1c35fe30f4d";
+const lorem = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, temporibus eaque? Laboriosam in rerum error nam quos nobis reprehenderit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, temporibus eaque? Laboriosam in rerum error nam quos nobis reprehenderit.";
 
 Builder.registerComponent(
 	dynamic(() => import("./components/Hero/Carousel-item")),
@@ -42,8 +46,7 @@ Builder.registerComponent(
 				name: "image",
 				type: "file",
 				allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
-				defaultValue:
-					"https://cdn.builder.io/api/v1/image/assets%2Fpwgjf0RoYWbdnJSbpBAjXNRMe9F2%2Ffb27a7c790324294af8be1c35fe30f4d",
+				defaultValue: imageUrl,
 			},
 		],
 	}
@@ -58,22 +61,20 @@ Builder.registerComponent(
 				name: "image",
 				type: "file",
 				allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
-				defaultValue:
-					"https://cdn.builder.io/api/v1/image/assets%2Fpwgjf0RoYWbdnJSbpBAjXNRMe9F2%2Ffb27a7c790324294af8be1c35fe30f4d",
+				defaultValue: imageUrl,
 			},
 			{
 				name: "headline",
 				type: "string",
-				defaultValue:
-					"Nadpis",
+				defaultValue: "Nadpis",
 			},
 
 			{
 				name: "description",
 				type: "string",
-				defaultValue: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, temporibus eaque? Laboriosam in rerum error nam quos nobis reprehenderit.",
+				defaultValue:
+					"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, temporibus eaque? Laboriosam in rerum error nam quos nobis reprehenderit.",
 			},
-
 		],
 	}
 );
@@ -96,7 +97,7 @@ Builder.registerComponent(
 				name: "url",
 				type: "url",
 				defaultValue: "#",
-			}
+			},
 		],
 	}
 );
@@ -138,3 +139,235 @@ Builder.registerComponent(
 		],
 	}
 );
+
+// ------------------
+// Tabs
+// ------------------
+
+Builder.registerComponent(
+	dynamic(() => import("./components/Tabs/TabItem")),
+	{
+		name: "TabItem",
+		inputs: [
+			{
+				name: "value",
+				type: "text",
+				allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
+				defaultValue: "",
+			},
+			{
+				name: "iconRight",
+				type: "file",
+				allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
+				defaultValue: imageUrl,
+			},
+			{
+				name: "iconBottom",
+				type: "file",
+				allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
+				defaultValue: imageUrl,
+			},
+			{
+				name: "heading",
+				type: "string",
+				defaultValue: "Nadpis",
+			},
+		],
+	}
+);
+
+// pass your custom component to withChildren()
+const TabsChildren = withChildren(Tabs);
+
+Builder.registerComponent(TabsChildren, {
+	name: "TabsCustom",
+	inputs: [
+		{
+			name: "iconRight1",
+			type: "file",
+			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
+			defaultValue: imageUrl,
+		},
+		{
+			name: "iconBottom1",
+			type: "file",
+			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
+			defaultValue: imageUrl,
+		},
+		{
+			name: "heading1",
+			type: "string",
+			defaultValue: "Nadpis",
+		},
+		{
+			name: "iconRight2",
+			type: "file",
+			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
+			defaultValue: imageUrl,
+		},
+		{
+			name: "iconBottom2",
+			type: "file",
+			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
+			defaultValue: imageUrl,
+		},
+		{
+			name: "heading2",
+			type: "string",
+			defaultValue: "Nadpis",
+		},
+		{
+			name: "iconRight3",
+			type: "file",
+			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
+			defaultValue: imageUrl,
+		},
+		{
+			name: "iconBottom3",
+			type: "file",
+			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
+			defaultValue: imageUrl,
+		},
+		{
+			name: "heading3",
+			type: "string",
+			defaultValue: "Nadpis",
+		},
+		{
+			name: "iconRight4",
+			type: "file",
+			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
+			defaultValue: imageUrl,
+		},
+		{
+			name: "iconBottom4",
+			type: "file",
+			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
+			defaultValue: imageUrl,
+		},
+		{
+			name: "heading4",
+			type: "string",
+			defaultValue: "Nadpis",
+		},
+		{
+			name: "iconRight5",
+			type: "file",
+			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
+			defaultValue: imageUrl,
+		},
+		{
+			name: "iconBottom5",
+			type: "file",
+			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
+			defaultValue: imageUrl,
+		},
+		{
+			name: "heading5",
+			type: "string",
+			defaultValue: "Nadpis",
+		},
+		{
+			name: "iconRight6",
+			type: "file",
+			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
+			defaultValue: imageUrl,
+		},
+		{
+			name: "iconBottom6",
+			type: "file",
+			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
+			defaultValue: imageUrl,
+		},
+		{
+			name: "heading6",
+			type: "string",
+			defaultValue: "Nadpis",
+		},
+
+		{
+			name: "tabHeading1",
+			type: "string",
+			defaultValue: "Nadpis",
+		},
+		{
+			name: "tabParagraph1",
+			type: "string",
+			defaultValue: lorem,
+		},
+		{
+			name: "tabHeading2",
+			type: "string",
+			defaultValue: "Nadpis",
+		},
+		{
+			name: "tabParagraph2",
+			type: "string",
+			defaultValue: lorem,
+		},
+		{
+			name: "tabHeading3",
+			type: "string",
+			defaultValue: "Nadpis",
+		},
+		{
+			name: "tabParagraph3",
+			type: "string",
+			defaultValue: lorem,
+		},
+		{
+			name: "tabHeading4",
+			type: "string",
+			defaultValue: "Nadpis",
+		},
+		{
+			name: "tabParagraph4",
+			type: "string",
+			defaultValue: lorem,
+		},
+		{
+			name: "tabHeading5",
+			type: "string",
+			defaultValue: "Nadpis",
+		},
+		{
+			name: "tabParagraph5",
+			type: "string",
+			defaultValue: lorem,
+		},
+		{
+			name: "tabHeading6",
+			type: "string",
+			defaultValue: "Nadpis",
+		},
+		{
+			name: "tabParagraph6",
+			type: "string",
+			defaultValue: lorem,
+		},
+		{
+			name: "tabURL1",
+			type: "url",
+		},
+		{
+			name: "tabURL2",
+			type: "url",
+		},
+		{
+			name: "tabURL3",
+			type: "url",
+		},
+		{
+			name: "tabURL4",
+			type: "url",
+		},
+		{
+			name: "tabURL5",
+			type: "url",
+		},
+		{
+			name: "tabURL6",
+			type: "url",
+		}
+	],
+});

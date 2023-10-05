@@ -1,6 +1,6 @@
-import { Inter } from 'next/font/google'
+import { Ubuntu } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Ubuntu({ subsets: ['latin'], weight: ['400', '700'] })
 
 export default function Home() {
   return (
