@@ -183,7 +183,7 @@ Builder.registerComponent(TabsChildren, {
 	name: "TabsCustom",
 	inputs: [
 		{
-			name: "iconRight1",
+			name: "iconRight",
 			type: "file",
 			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
 			defaultValue: imageUrl,
@@ -199,12 +199,7 @@ Builder.registerComponent(TabsChildren, {
 			type: "string",
 			defaultValue: "Nadpis",
 		},
-		{
-			name: "iconRight2",
-			type: "file",
-			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
-			defaultValue: imageUrl,
-		},
+
 		{
 			name: "iconBottom2",
 			type: "file",
@@ -216,12 +211,7 @@ Builder.registerComponent(TabsChildren, {
 			type: "string",
 			defaultValue: "Nadpis",
 		},
-		{
-			name: "iconRight3",
-			type: "file",
-			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
-			defaultValue: imageUrl,
-		},
+
 		{
 			name: "iconBottom3",
 			type: "file",
@@ -233,12 +223,7 @@ Builder.registerComponent(TabsChildren, {
 			type: "string",
 			defaultValue: "Nadpis",
 		},
-		{
-			name: "iconRight4",
-			type: "file",
-			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
-			defaultValue: imageUrl,
-		},
+
 		{
 			name: "iconBottom4",
 			type: "file",
@@ -250,12 +235,7 @@ Builder.registerComponent(TabsChildren, {
 			type: "string",
 			defaultValue: "Nadpis",
 		},
-		{
-			name: "iconRight5",
-			type: "file",
-			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
-			defaultValue: imageUrl,
-		},
+
 		{
 			name: "iconBottom5",
 			type: "file",
@@ -267,12 +247,7 @@ Builder.registerComponent(TabsChildren, {
 			type: "string",
 			defaultValue: "Nadpis",
 		},
-		{
-			name: "iconRight6",
-			type: "file",
-			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
-			defaultValue: imageUrl,
-		},
+
 		{
 			name: "iconBottom6",
 			type: "file",
@@ -292,7 +267,7 @@ Builder.registerComponent(TabsChildren, {
 		},
 		{
 			name: "tabParagraph1",
-			type: "string",
+			type: "longText",
 			defaultValue: lorem,
 		},
 		{
@@ -302,7 +277,7 @@ Builder.registerComponent(TabsChildren, {
 		},
 		{
 			name: "tabParagraph2",
-			type: "string",
+			type: "longText",
 			defaultValue: lorem,
 		},
 		{
@@ -312,7 +287,7 @@ Builder.registerComponent(TabsChildren, {
 		},
 		{
 			name: "tabParagraph3",
-			type: "string",
+			type: "longText",
 			defaultValue: lorem,
 		},
 		{
@@ -322,7 +297,7 @@ Builder.registerComponent(TabsChildren, {
 		},
 		{
 			name: "tabParagraph4",
-			type: "string",
+			type: "longText",
 			defaultValue: lorem,
 		},
 		{
@@ -332,7 +307,7 @@ Builder.registerComponent(TabsChildren, {
 		},
 		{
 			name: "tabParagraph5",
-			type: "string",
+			type: "longText",
 			defaultValue: lorem,
 		},
 		{
@@ -342,7 +317,7 @@ Builder.registerComponent(TabsChildren, {
 		},
 		{
 			name: "tabParagraph6",
-			type: "string",
+			type: "longText",
 			defaultValue: lorem,
 		},
 		{
