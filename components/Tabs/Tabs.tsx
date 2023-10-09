@@ -52,7 +52,7 @@ export default function TabsCustom(props: Props) {
 				<div className="w-full grid grid-cols-2 grid-rows-3 sm:grid-cols-3 sm:grid-rows-2 gap-2 lg:gap-4 pt-2 m-auto">
 					<TabsTrigger
 						value="tab1"
-						className=" h-30 bg-[#F25944] rounded-xl cursor-pointer transition-time ease-in-out duration-1000 hover:bg-red-800">
+						className=" h-30 bg-[#F25944] hover:bg-red-700 rounded-xl cursor-pointer transition-time ease-in-out duration-1000 hover:bg-red-800">
 						<TabItem
 							iconRight={props.iconRight}
 							iconBottom={props.iconBottom1}
@@ -61,7 +61,7 @@ export default function TabsCustom(props: Props) {
 					</TabsTrigger>
 					<TabsTrigger
 						value="tab2"
-						className=" h-30 bg-[#F25944] rounded-xl flex flex-col">
+						className=" h-30 bg-[#F25944] hover:bg-red-700 rounded-xl flex flex-col">
 						<TabItem
 							iconRight={props.iconRight}
 							iconBottom={props.iconBottom2}
@@ -70,7 +70,7 @@ export default function TabsCustom(props: Props) {
 					</TabsTrigger>
 					<TabsTrigger
 						value="tab3"
-						className=" h-30 bg-[#F25944] rounded-xl flex flex-col ">
+						className=" h-30 bg-[#F25944] hover:bg-red-700 rounded-xl flex flex-col ">
 						<TabItem
 							iconRight={props.iconRight}
 							iconBottom={props.iconBottom3}
@@ -80,7 +80,7 @@ export default function TabsCustom(props: Props) {
 
 					<TabsTrigger
 						value="tab4"
-						className=" h-30 bg-[#F25944] rounded-xl flex flex-col ">
+						className=" h-30 bg-[#F25944] hover:bg-red-700 rounded-xl flex flex-col ">
 						<TabItem
 							iconRight={props.iconRight}
 							iconBottom={props.iconBottom4}
@@ -89,7 +89,7 @@ export default function TabsCustom(props: Props) {
 					</TabsTrigger>
 					<TabsTrigger
 						value="tab5"
-						className=" h-30 bg-[#F25944] rounded-xl flex flex-col ">
+						className=" h-30 bg-[#F25944] hover:bg-red-700 rounded-xl flex flex-col ">
 						<TabItem
 							iconRight={props.iconRight}
 							iconBottom={props.iconBottom5}
@@ -98,7 +98,7 @@ export default function TabsCustom(props: Props) {
 					</TabsTrigger>
 					<TabsTrigger
 						value="tab6"
-						className=" h-30 bg-[#F25944] rounded-xl flex flex-col ">
+						className=" h-30 bg-[#F25944] hover:bg-red-700 rounded-xl flex flex-col ">
 						<TabItem
 							iconRight={props.iconRight}
 							iconBottom={props.iconBottom6}
