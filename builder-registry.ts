@@ -150,6 +150,29 @@ Builder.registerComponent(
 		name: "TabItem",
 		inputs: [
 			{
+				name: "tabs",
+				type: "list",
+				subFields: [
+					{
+						name: "bottom",
+						type: "string",
+						allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
+					},
+					{
+						name: "heading",
+						type: "string",
+					},
+					{
+						name: "tabHeading",
+						type: "string",
+					},
+					{
+						name: "paragraph",
+						type: "string",
+					},
+				],
+			},
+			{
 				name: "value",
 				type: "text",
 				allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
@@ -183,166 +206,33 @@ Builder.registerComponent(TabsChildren, {
 	name: "TabsCustom",
 	inputs: [
 		{
+			name: "tabs",
+			type: "list",
+			subFields: [
+				{
+					name: "bottom",
+					type: "file",
+					allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
+				},
+				{
+					name: "heading",
+					type: "string",
+				},
+				{
+					name: "tabHeading",
+					type: "string",
+				},
+				{
+					name: "paragraph",
+					type: "longText",
+				},
+			],
+		},
+		{
 			name: "iconRight",
 			type: "file",
 			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
 			defaultValue: imageUrl,
 		},
-		{
-			name: "iconBottom1",
-			type: "file",
-			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
-			defaultValue: imageUrl,
-		},
-		{
-			name: "heading1",
-			type: "string",
-			defaultValue: "Nadpis",
-		},
-
-		{
-			name: "iconBottom2",
-			type: "file",
-			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
-			defaultValue: imageUrl,
-		},
-		{
-			name: "heading2",
-			type: "string",
-			defaultValue: "Nadpis",
-		},
-
-		{
-			name: "iconBottom3",
-			type: "file",
-			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
-			defaultValue: imageUrl,
-		},
-		{
-			name: "heading3",
-			type: "string",
-			defaultValue: "Nadpis",
-		},
-
-		{
-			name: "iconBottom4",
-			type: "file",
-			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
-			defaultValue: imageUrl,
-		},
-		{
-			name: "heading4",
-			type: "string",
-			defaultValue: "Nadpis",
-		},
-
-		{
-			name: "iconBottom5",
-			type: "file",
-			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
-			defaultValue: imageUrl,
-		},
-		{
-			name: "heading5",
-			type: "string",
-			defaultValue: "Nadpis",
-		},
-
-		{
-			name: "iconBottom6",
-			type: "file",
-			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
-			defaultValue: imageUrl,
-		},
-		{
-			name: "heading6",
-			type: "string",
-			defaultValue: "Nadpis",
-		},
-
-		{
-			name: "tabHeading1",
-			type: "string",
-			defaultValue: "Nadpis",
-		},
-		{
-			name: "tabParagraph1",
-			type: "longText",
-			defaultValue: lorem,
-		},
-		{
-			name: "tabHeading2",
-			type: "string",
-			defaultValue: "Nadpis",
-		},
-		{
-			name: "tabParagraph2",
-			type: "longText",
-			defaultValue: lorem,
-		},
-		{
-			name: "tabHeading3",
-			type: "string",
-			defaultValue: "Nadpis",
-		},
-		{
-			name: "tabParagraph3",
-			type: "longText",
-			defaultValue: lorem,
-		},
-		{
-			name: "tabHeading4",
-			type: "string",
-			defaultValue: "Nadpis",
-		},
-		{
-			name: "tabParagraph4",
-			type: "longText",
-			defaultValue: lorem,
-		},
-		{
-			name: "tabHeading5",
-			type: "string",
-			defaultValue: "Nadpis",
-		},
-		{
-			name: "tabParagraph5",
-			type: "longText",
-			defaultValue: lorem,
-		},
-		{
-			name: "tabHeading6",
-			type: "string",
-			defaultValue: "Nadpis",
-		},
-		{
-			name: "tabParagraph6",
-			type: "longText",
-			defaultValue: lorem,
-		},
-		{
-			name: "tabURL1",
-			type: "url",
-		},
-		{
-			name: "tabURL2",
-			type: "url",
-		},
-		{
-			name: "tabURL3",
-			type: "url",
-		},
-		{
-			name: "tabURL4",
-			type: "url",
-		},
-		{
-			name: "tabURL5",
-			type: "url",
-		},
-		{
-			name: "tabURL6",
-			type: "url",
-		}
 	],
 });
