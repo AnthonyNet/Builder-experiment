@@ -202,7 +202,8 @@ box-shadow: -1px 7px 27px 3px rgba(0,0,0,0.75);
 }
 
 
-.__my-rotate[data-state="active"] .__rotate {
+.__my-rotate[data-state="active"] .__rotate,
+.__accordion [data-state=open] .__rotate {
     transform: rotate(45deg);
 	background-color: #fff;
 	border-radius: 50%;
