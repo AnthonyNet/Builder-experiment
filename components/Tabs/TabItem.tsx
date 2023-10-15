@@ -15,10 +15,10 @@ export default function TabItem({ iconRight, iconBottom, heading, index }: Props
 				src={iconRight}
 				alt="servicesIcon"
 			/>
-			<span className="self-start mt-auto">
+			<span className="self-start mt-auto pl-2">
 				<h2 className="text-2xl md:text-3xl self-start text-white">{index}.</h2>
 			</span>
-			<h3 className="flex  flex-wrap justify-start text-2xl text-white">{heading}</h3>
+			<h3 className="flex  flex-wrap justify-start text-2xl text-white pl-2">{heading}</h3>
 		</div>
 	);
 }

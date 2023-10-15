@@ -65,7 +65,7 @@ export default function TabsCustom({tabs = [], ...props}: Props) {
 					<AccordionItem
 						value={tab.tabHeading.toLowerCase()}
 						key={tab.tabHeading.toLowerCase()}
-						className="sm:hidden w-[99%] sm:w-[49.5%] md:w-[32.5%] h-auto bg-[#F25944] rounded-xl cursor-pointer transition-time ease-in-out duration-1000 __accordion border-none my-1 pl-2">
+						className="sm:hidden w-[99%] sm:w-[49.5%] md:w-[32.5%] h-auto bg-[#F25944] rounded-xl cursor-pointer transition-time ease-in-out duration-1000 __accordion border-none my-1">
 						<AccordionTrigger>
 							<TabItem
 								index={index + 1}
