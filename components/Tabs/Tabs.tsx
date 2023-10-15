@@ -65,8 +65,8 @@ export default function TabsCustom({tabs = [], ...props}: Props) {
 					<AccordionItem
 						value={tab.tabHeading.toLowerCase()}
 						key={tab.tabHeading.toLowerCase()}
-						className="sm:hidden w-[99%] sm:w-[49.5%] md:w-[32.5%] h-auto bg-[#F25944] rounded-xl cursor-pointer transition-time ease-in-out duration-1000 __accordion border-none my-1">
-						<AccordionTrigger>
+						className="sm:hidden w-[99%] sm:w-[49.5%] md:w-[32.5%] h-auto cursor-pointer transition-time ease-in-out duration-1000 __accordion border-none my-1">
+						<AccordionTrigger className="bg-[#F25944]  rounded-xl pl-2">
 							<TabItem
 								index={index + 1}
 								iconRight={props.iconRight}
@@ -76,10 +76,9 @@ export default function TabsCustom({tabs = [], ...props}: Props) {
 						</AccordionTrigger>
 
 						<AccordionContent
-							className="text-center transition-all duration-1000 ease-in-out"
-
+							className="text-center transition-all duration-1000 ease-in-out  rounded-xl"
 							key={tab.tabHeading.toLowerCase()}>
-							<div className="m-auto flex flex-col bg-gray-800  p-2  shadow-lg __tabContent rounded-b-lg">
+							<div className="m-auto flex flex-col bg-gray-800  px-2  shadow-lg __tabContent rounded-b-lg">
 								<p className="text-[#c7c7c7] py-4">{tab.paragraph}</p>
 							</div>
 						</AccordionContent>
