@@ -71,13 +71,13 @@ export default function TabsCustom({tabs = [], ...props}: Props) {
 								index={index + 1}
 								iconRight={props.iconRight}
 								iconBottom={tab.bottom}
-								heading={tab.tabHeading}
+								heading={tab.heading}
 							/>
 						</AccordionTrigger>
 
 						<AccordionContent
 							className="text-center transition-all duration-1000 ease-in-out  rounded-xl"
-							key={tab.tabHeading.toLowerCase()}>
+							key={tab.heading.toLowerCase()}>
 							<div className="m-auto flex flex-col bg-gray-800  px-2  shadow-lg __tabContent rounded-b-lg">
 								<p className="text-[#c7c7c7] py-4">{tab.paragraph}</p>
 							</div>
@@ -100,7 +100,7 @@ export default function TabsCustom({tabs = [], ...props}: Props) {
 									index={index + 1}
 									iconRight={props.iconRight}
 									iconBottom={tab.bottom}
-									heading={tab.tabHeading}
+									heading={tab.heading}
 								/>
 							</TabsTrigger>
 						))}

@@ -208,23 +208,23 @@ Builder.registerComponent(TabsChildren, {
 		{
 			name: "tabs",
 			type: "list",
+			required: true,
 			subFields: [
 				{
 					name: "bottom",
 					type: "file",
 					allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
+					required: true,
 				},
 				{
 					name: "heading",
 					type: "string",
-				},
-				{
-					name: "tabHeading",
-					type: "string",
+					required: true,
 				},
 				{
 					name: "paragraph",
 					type: "longText",
+					required: true,
 				},
 			],
 		},
@@ -233,6 +233,7 @@ Builder.registerComponent(TabsChildren, {
 			type: "file",
 			allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
 			defaultValue: imageUrl,
+			required: true,
 		},
 	],
 });
