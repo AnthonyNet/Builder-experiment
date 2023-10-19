@@ -142,10 +142,6 @@ html, body{
 	filter: invert(1);
 }
 
-.btn-primary:hover {
-	/*padding-right: 50px;*/
-}
-
 .btn-primary:hover:after {
 	opacity: 1;
 	right: 12px;
@@ -200,4 +196,10 @@ box-shadow: -1px 7px 27px 3px rgba(0,0,0,0.75);
 	background-color: #fff;
 	border-radius: 50%;
 	color: white;
+}
+
+@media screen and (min-width: 1900px) {
+	.btn-primary::before {
+	top: 43%;
+}
 }
