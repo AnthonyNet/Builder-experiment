@@ -93,12 +93,8 @@ Builder.registerComponent(
 				// Option to select a value
 				name: "backgroundColor",
 				type: "string", // You can use a different type based on your needs
-				defaultValue: " bg-[rgba(239,64,65,1)]",
-				enum: [
-					{ label: "Red", value: "bg-[rgba(239,64,65,1)] text-white" },
-					{ label: "Blue", value: "bg-black text-white" },
-					{ label: "White", value: "bg-white text-black" },
-				],
+				defaultValue: "red",
+				enum: ["red", "blue", "white"],
 			},
 			{
 				name: "text",
