@@ -21,50 +21,24 @@ interface Props {
 	}[];
 	iconRight: string;
 	iconBottom1: string;
-	heading1: string;
-
 	iconBottom2: string;
-	heading2: string;
-
 	iconBottom3: string;
-	heading3: string;
-
 	iconBottom4: string;
-	heading4: string;
-
 	iconBottom5: string;
-	heading5: string;
-
-	iconBottom6: string;
-	heading6: string;
-
-	tabHeading1: string;
-	tabHeading2: string;
-	tabHeading3: string;
-	tabHeading4: string;
-	tabHeading5: string;
-	tabHeading6: string;
-
-	tabParagraph1: string;
-	tabParagraph2: string;
-	tabParagraph3: string;
-	tabParagraph4: string;
-	tabParagraph5: string;
-	tabParagraph6: string;
-
-	tabURL1: string;
-	tabURL2: string;
-	tabURL3: string;
-	tabURL4: string;
-	tabURL5: string;
-	tabURL6: string;
 }
 export default function TabsCustom({tabs = [], ...props}: Props) {
 
   const [activeTab, setActiveTab] = useState(null);
 
   const handleTabClick = (index:any) => {
-    setActiveTab(index === activeTab ? null : index);
+
+   if (index === activeTab) {
+			// Clicking the active tab again should deactivate it
+			setActiveTab(null);
+		} else {
+			// Clicking a different tab should activate it
+			setActiveTab(index);
+		}
   };
 
 	return (
@@ -95,7 +69,7 @@ export default function TabsCustom({tabs = [], ...props}: Props) {
 				))}
 			</Accordion>
 
-			<Tabs className="max-sm:hidden w-full  bg-[#243752] mr-auto __tabs">
+			<Tabs className="max-sm:hidden w-full min-h-[55dvh] md:min-h-[40dvh]  bg-[#243752] mr-auto __tabs">
 				<TabsList className="flex flex-col bg-[#243752] w-full h-auto">
 					<div className="w-full flex flex-row flex-wrap gap-1 justify-center pt-2 m-auto">
 						{tabs.map((tab, index) => (
@@ -104,7 +78,7 @@ export default function TabsCustom({tabs = [], ...props}: Props) {
 								value={tab.tabHeading.toLowerCase()}
 								key={tab.tabHeading.toLowerCase()}
 								className={`w-[99%] sm:w-[49.5%] md:w-[32.5%] h-auto rounded-xl cursor-pointer transition-time ease-in-out duration-1000 bg-[#F25944] hover:bg-red-800 ${
-									activeTab === index ? "myBackground2 " : " myBackground "
+									activeTab === index && " changeBackground "
 								}`}>
 								<TabItem
 									index={index + 1}
@@ -118,8 +92,8 @@ export default function TabsCustom({tabs = [], ...props}: Props) {
 				</TabsList>
 				{tabs.map((tab, index) => (
 					<TabsContent
-						className={`text-center transition-all duration-1000 ease-in-out ${
-							activeTab !== index ? "hidden" : ""
+						className={`text-center ${
+							activeTab !== index && "hidden"
 						}`}
 						value={tab.tabHeading.toLowerCase()}
 						key={tab.tabHeading.toLowerCase()}>
