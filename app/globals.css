@@ -190,25 +190,26 @@ box-shadow: -1px 7px 27px 3px rgba(0,0,0,0.75);
 	border-radius: 20px;
 }
 
-/*
+
 .__my-rotate[data-state="active"] .__rotate,
 .__accordion [data-state=open] .__rotate {
-    transform: rotate(45deg);
+   /* transform: rotate(45deg);*/
 	background-color: #fff;
 	border-radius: 50%;
 	color: white;
 }
-*/
+
+
 
 @media screen and (min-width: 1900px) {
 	.btn-primary::before {
 	top: 43%;
 }
 }
-
+/*
 .changeBackground{ background: rgb(153, 6, 6);}
 .changeBackground .__rotate{
 	transform: rotate(45deg); background-color: #fff;
 	border-radius: 50%;
 	color: white;
-}
+}*/

@@ -28,19 +28,6 @@ interface Props {
 }
 export default function TabsCustom({tabs = [], ...props}: Props) {
 
-  const [activeTab, setActiveTab] = useState(null);
-
-  const handleTabClick = (index:any) => {
-
-   if (index === activeTab) {
-			// Clicking the active tab again should deactivate it
-			setActiveTab(null);
-		} else {
-			// Clicking a different tab should activate it
-			setActiveTab(index);
-		}
-  };
-
 	return (
 		<>
 			<Accordion type="single" collapsible className="w-full">
@@ -59,7 +46,6 @@ export default function TabsCustom({tabs = [], ...props}: Props) {
 						</AccordionTrigger>
 
 						<AccordionContent
-							className={`${activeTab && "hidden border-8"}`}
 							key={tab.heading.toLowerCase()}>
 							<div className="m-auto flex flex-col bg-gray-800  px-2  shadow-lg __tabContent rounded-b-lg">
 								<p className="text-[#c7c7c7] py-4">{tab.paragraph}</p>
@@ -74,12 +60,9 @@ export default function TabsCustom({tabs = [], ...props}: Props) {
 					<div className="w-full flex flex-row flex-wrap gap-1 justify-center pt-2 m-auto">
 						{tabs.map((tab, index) => (
 							<TabsTrigger
-								onClick={() => handleTabClick(index)}
 								value={tab.tabHeading.toLowerCase()}
 								key={tab.tabHeading.toLowerCase()}
-								className={`w-[99%] sm:w-[49.5%] md:w-[32.5%] h-auto rounded-xl cursor-pointer transition-time ease-in-out duration-1000 bg-[#F25944] hover:bg-red-800 ${
-									activeTab === index && " changeBackground "
-								}`}>
+								className="w-[99%] sm:w-[49.5%] md:w-[32.5%] h-auto rounded-xl cursor-pointer transition-time ease-in-out duration-1000 bg-[#F25944] hover:bg-red-800" >
 								<TabItem
 									index={index + 1}
 									iconRight={props.iconRight}
@@ -92,9 +75,7 @@ export default function TabsCustom({tabs = [], ...props}: Props) {
 				</TabsList>
 				{tabs.map((tab, index) => (
 					<TabsContent
-						className={`text-center ${
-							activeTab !== index && "hidden"
-						}`}
+						className="text-center"
 						value={tab.tabHeading.toLowerCase()}
 						key={tab.tabHeading.toLowerCase()}>
 						<TabContentItem
