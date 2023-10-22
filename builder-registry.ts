@@ -53,32 +53,7 @@ Builder.registerComponent(
 	}
 );
 
-Builder.registerComponent(
-	dynamic(() => import("./components/ServicesSection/Item")),
-	{
-		name: "ServicesItem",
-		inputs: [
-			{
-				name: "image",
-				type: "file",
-				allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
-				defaultValue: imageUrl,
-			},
-			{
-				name: "headline",
-				type: "string",
-				defaultValue: "Nadpis",
-			},
 
-			{
-				name: "description",
-				type: "string",
-				defaultValue:
-					"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, temporibus eaque? Laboriosam in rerum error nam quos nobis reprehenderit.",
-			},
-		],
-	}
-);
 
 // ------------------
 // Buttons
@@ -114,60 +89,6 @@ Builder.registerComponent(
 // Tabs
 // ------------------
 
-Builder.registerComponent(
-	dynamic(() => import("./components/Tabs/TabItem")),
-	{
-		name: "TabItem",
-		inputs: [
-			{
-				name: "tabs",
-				type: "list",
-				subFields: [
-					{
-						name: "bottom",
-						type: "string",
-						allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
-					},
-					{
-						name: "heading",
-						type: "string",
-					},
-					{
-						name: "tabHeading",
-						type: "string",
-					},
-					{
-						name: "paragraph",
-						type: "string",
-					},
-				],
-			},
-			{
-				name: "value",
-				type: "text",
-				allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
-				defaultValue: "",
-			},
-			{
-				name: "iconRight",
-				type: "file",
-				allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
-				defaultValue: imageUrl,
-			},
-			{
-				name: "iconBottom",
-				type: "file",
-				allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
-				defaultValue: imageUrl,
-			},
-			{
-				name: "heading",
-				type: "string",
-				defaultValue: "Nadpis",
-			},
-		],
-	}
-);
 
 // pass your custom component to withChildren()
 const TabsChildren = withChildren(Tabs);
