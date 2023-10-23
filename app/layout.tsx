@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Ubuntu } from 'next/font/google'
 import {Tracking} from '../components/Tracking'
+import { Partytown } from "@builder.io/partytown/react";
 import './globals.css'
 
 
@@ -18,10 +19,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={ubuntu.className}>{children}
-	  <Tracking />
-	  </body>
-    </html>
-  )
+		<html lang="en">
+			<body className={ubuntu.className}>
+				<Partytown
+					debug={true}
+					forward={["gtag", "dataLayer.push", "fbq"]}
+				/>
+				{children}
+				<Tracking />
+			</body>
+		</html>
+	);
 }
