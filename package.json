@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@builder.io/dev-tools": "^0.1.24",
+    "@builder.io/partytown": "^0.8.1",
     "@builder.io/react": "^3.0.14",
     "@builder.io/sdk": "^2.0.8",
     "@builder.io/widgets": "^1.2.24",
