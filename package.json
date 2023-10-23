@@ -1,39 +1,40 @@
 {
-  "name": "builder-app",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@builder.io/dev-tools": "^0.1.24",
-    "@builder.io/partytown": "^0.8.1",
-    "@builder.io/react": "^3.0.14",
-    "@builder.io/sdk": "^2.0.8",
-    "@builder.io/widgets": "^1.2.24",
-    "@radix-ui/react-accordion": "^1.1.2",
-    "@radix-ui/react-tabs": "^1.0.4",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.0.0",
-    "lucide-react": "^0.288.0",
-    "next": "13.5.5",
-    "react": "^18",
-    "react-dom": "^18",
-    "tailwind-merge": "^1.14.0",
-    "tailwindcss-animate": "^1.0.7"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10",
-    "eslint": "^8",
-    "eslint-config-next": "13.5.5",
-    "postcss": "^8",
-    "tailwindcss": "^3",
-    "typescript": "^5"
-  }
+	"name": "builder-app",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "npm run partytown && next build",
+		"start": "next start",
+		"lint": "next lint",
+		"partytown": "partytown copylib public/~partytown"
+	},
+	"dependencies": {
+		"@builder.io/dev-tools": "^0.1.24",
+		"@builder.io/partytown": "^0.8.1",
+		"@builder.io/react": "^3.0.14",
+		"@builder.io/sdk": "^2.0.8",
+		"@builder.io/widgets": "^1.2.24",
+		"@radix-ui/react-accordion": "^1.1.2",
+		"@radix-ui/react-tabs": "^1.0.4",
+		"class-variance-authority": "^0.7.0",
+		"clsx": "^2.0.0",
+		"lucide-react": "^0.288.0",
+		"next": "13.5.5",
+		"react": "^18",
+		"react-dom": "^18",
+		"tailwind-merge": "^1.14.0",
+		"tailwindcss-animate": "^1.0.7"
+	},
+	"devDependencies": {
+		"@types/node": "^20",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
+		"autoprefixer": "^10",
+		"eslint": "^8",
+		"eslint-config-next": "13.5.5",
+		"postcss": "^8",
+		"tailwindcss": "^3",
+		"typescript": "^5"
+	}
 }
