@@ -1,9 +1,10 @@
 import { Builder, withChildren } from "@builder.io/react";
 import dynamic from "next/dynamic";
 import Tabs from "./components/Tabs/Tabs";
+import "@builder.io/widgets";
+import "@builder.io/widgets/dist/lib/builder-widgets-async";
 
 const imageUrl = "https://cdn.builder.io/api/v1/image/assets%2Fpwgjf0RoYWbdnJSbpBAjXNRMe9F2%2Ffb27a7c790324294af8be1c35fe30f4d";
-const lorem = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, temporibus eaque? Laboriosam in rerum error nam quos nobis reprehenderit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, temporibus eaque? Laboriosam in rerum error nam quos nobis reprehenderit.";
 
 Builder.registerComponent(
 	dynamic(() => import("./components/Hero/Carousel-item")),
@@ -52,84 +53,28 @@ Builder.registerComponent(
 	}
 );
 
-Builder.registerComponent(
-	dynamic(() => import("./components/ServicesSection/Item")),
-	{
-		name: "ServicesItem",
-		inputs: [
-			{
-				name: "image",
-				type: "file",
-				allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
-				defaultValue: imageUrl,
-			},
-			{
-				name: "headline",
-				type: "string",
-				defaultValue: "Nadpis",
-			},
 
-			{
-				name: "description",
-				type: "string",
-				defaultValue:
-					"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, temporibus eaque? Laboriosam in rerum error nam quos nobis reprehenderit.",
-			},
-		],
-	}
-);
 
 // ------------------
 // Buttons
 // ------------------
 
 Builder.registerComponent(
-	dynamic(() => import("./components/Buttons/ButtonRed")),
+	dynamic(() => import("./components/Buttons/Button")),
 	{
-		name: "ButtonRed",
+		name: "Button",
 		inputs: [
+			{
+				// Option to select a value
+				name: "backgroundColor",
+				type: "string", // You can use a different type based on your needs
+				defaultValue: "red",
+				enum: ["red", "blue", "white"],
+			},
 			{
 				name: "text",
 				type: "string",
-				defaultValue: "ButtonRed",
-			},
-			{
-				name: "url",
-				type: "url",
-				defaultValue: "#",
-			},
-		],
-	}
-);
-
-Builder.registerComponent(
-	dynamic(() => import("./components/Buttons/ButtonWhite")),
-	{
-		name: "ButtonWhite",
-		inputs: [
-			{
-				name: "text",
-				type: "string",
-				defaultValue: "ButtonWhite",
-			},
-			{
-				name: "url",
-				type: "url",
-				defaultValue: "#",
-			},
-		],
-	}
-);
-
-Builder.registerComponent(
-	dynamic(() => import("./components/Buttons/ButtonBlue")),
-	{
-		name: "ButtonBlue",
-		inputs: [
-			{
-				name: "text",
-				type: "string",
-				defaultValue: "ButtonBlue",
+				defaultValue: "Button",
 			},
 			{
 				name: "url",
@@ -144,60 +89,6 @@ Builder.registerComponent(
 // Tabs
 // ------------------
 
-Builder.registerComponent(
-	dynamic(() => import("./components/Tabs/TabItem")),
-	{
-		name: "TabItem",
-		inputs: [
-			{
-				name: "tabs",
-				type: "list",
-				subFields: [
-					{
-						name: "bottom",
-						type: "string",
-						allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
-					},
-					{
-						name: "heading",
-						type: "string",
-					},
-					{
-						name: "tabHeading",
-						type: "string",
-					},
-					{
-						name: "paragraph",
-						type: "string",
-					},
-				],
-			},
-			{
-				name: "value",
-				type: "text",
-				allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
-				defaultValue: "",
-			},
-			{
-				name: "iconRight",
-				type: "file",
-				allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
-				defaultValue: imageUrl,
-			},
-			{
-				name: "iconBottom",
-				type: "file",
-				allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
-				defaultValue: imageUrl,
-			},
-			{
-				name: "heading",
-				type: "string",
-				defaultValue: "Nadpis",
-			},
-		],
-	}
-);
 
 // pass your custom component to withChildren()
 const TabsChildren = withChildren(Tabs);
