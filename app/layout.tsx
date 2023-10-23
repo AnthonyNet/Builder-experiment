@@ -23,7 +23,7 @@ export default function RootLayout({
 			<body className={ubuntu.className}>
 				<Partytown
 					debug={true}
-					forward={["gtag", "dataLayer.push", "fbq"]}
+					forward={["gtag", "dataLayer.push", "rc"]}
 				/>
 				{children}
 				<Tracking />
