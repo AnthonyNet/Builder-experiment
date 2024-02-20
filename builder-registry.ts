@@ -94,7 +94,7 @@ Builder.registerComponent(
 		name: "ImageCustom",
 		inputs: [
 			{
-				name: "iconBig",
+				name: "image",
 				type: "file",
 				allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
 				defaultValue: imageUrl,
