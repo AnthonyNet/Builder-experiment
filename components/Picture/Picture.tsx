@@ -8,11 +8,7 @@ interface Props {
 export default function Picture({ image }: Props) {
 	return (
 		<picture>
-			<img
-				src={image}
-				fetchPriority="low"
-				alt="carouselImage"
-			/>
+			<img src={image} loading="lazy" decoding="async" alt="carouselImage" />
 		</picture>
 	);
 }
