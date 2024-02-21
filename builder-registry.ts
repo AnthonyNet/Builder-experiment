@@ -103,6 +103,21 @@ Builder.registerComponent(
 	}
 );
 
+Builder.registerComponent(
+	dynamic(() => import("./components/Picture/HeroImage")),
+	{
+		name: "HeroImage",
+		inputs: [
+			{
+				name: "image",
+				type: "file",
+				allowedFileTypes: ["jpeg", "jpg", "png", "svg", "webp"],
+				defaultValue: imageUrl,
+			},
+		],
+	}
+);
+
 // ------------------
 // Tabs
 // ------------------
